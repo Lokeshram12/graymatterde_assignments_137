@@ -1,0 +1,242 @@
+-- day 2 SQL
+
+create table dbo.myauditLog (
+	logId int identity(1,1) primary key,
+	insertDate datetime,
+	insertedBy varchar(100),
+	deleteDate datetime,
+	deletedBy varchar(100),
+	updateDate datetime,
+	updatedBy varchar(100) )
+
+select * from dbo.myauditLog
+
+-- after insert trigger
+create trigger trg_afterInsert
+on Person.AddressType
+after insert
+as
+begin
+  --insert a log entry when a new employee is inserted
+  insert into dbo.myauditLog(insertDate,insertedBy)
+  values(getdate(),SUSER_NAME());
+end;
+GO
+
+select * from Person.AddressType
+insert into Person.AddressType(Name,ModifiedDate) values('myHome',GETDATE())
+
+-- after update trigger
+create trigger trg_afterUpdate
+on Person.AddressType
+after update
+as
+begin
+  --insert a log entry when a new employee is inserted
+  insert into dbo.myauditLog(updateDate,updatedBy)
+  values(getdate(),SUSER_NAME());
+end;
+GO
+
+update Person.AddressType
+set Name='new company today'
+where AddressTypeID=4
+
+--after delete trigger
+
+create trigger trg_afterDelete
+on Person.AddressType
+after delete
+as
+begin
+  --insert a log entry when a new employee is inserted
+  insert into dbo.myauditLog(deleteDate,deletedBy)
+  values(getdate(),SUSER_NAME());
+end;
+GO
+
+delete from Person.AddressType where Name='Archive'
+
+-- add multiple columns
+
+ALTER TABLE dbo.myauditLog
+add name nvarchar(50)
+
+-- create an Instead of Insert trigger
+create trigger trg_insteadOfInsert
+on Person.AddressType
+instead of insert
+as
+begin
+    insert into dbo.myauditLog(insertDate,insertedBy,name)
+  select GETDATE(),SUSER_NAME(),i.name
+  from inserted i;
+End;
+Go
+
+insert into Person.AddressType(Name) values('myNEWHome',GETDATE())
+
+-- functions in SQL
+-- scalar and tabular
+
+select * from Production.Product;
+
+create function safetyLevel(@safetystocklevel int)
+returns int
+as
+begin
+   declare @safe int;
+   set @safe=@safetystocklevel%1000;
+   return @safe;
+end;
+
+select name,dbo.safetyLevel(safetystocklevel) as safe
+from Production.Product;
+
+--create a table-valued function
+
+select * from Sales.CurrencyRate
+create function currencycode(@tocurrencycode nchar(3))
+returns table
+as
+return (
+select CurrencyRateID,AverageRate
+from Sales.CurrencyRate
+where ToCurrencyCode=@tocurrencycode
+);
+
+select * from dbo.currencycode('JPY');
+select * from dbo.currencycode('AUD');
+
+
+--start a transaction
+begin transaction;
+
+--variables if needed can declared using @
+declare @FromWarehouseID INT=1;
+
+--perform the inventory transfer
+update Production.ProductInventory
+set Quantity=Quantity-10
+where ProductID=1 and LocationID=@FromWarehouseID
+
+insert into Production.ProductInventory(ProductID,LocationID,Shelf,Bin,Quantity)
+values (1,2,'A','1',10);
+
+--commit the transaction if everything is successful
+
+commit transaction;
+
+print 'inventory transfer completed successfully.';
+
+
+-- stored procedures
+
+-- use salesorderheader,sales.customer
+-- 1. calculate the total sales amount for a specified customer
+select * from Sales.salesorderheader
+declare @value int
+declare @orderId varchar(500)
+
+WITH cte_sales AS (
+    SELECT CustomerID, SUM(subtotal) AS total
+    FROM Sales.SalesOrderHeader
+    GROUP BY CustomerID
+)
+select * from cte_sales
+
+select @value = total from cte_sales
+print 'executed' @value
+
+
+--update total due field for a specific sales order
+CREATE TABLE #tmp_sales (
+    SalesOrderID int,
+    OrderDate datetime,
+	TotalDue money
+);
+INSERT INTO #tmp_sales 
+SELECT SalesOrderID,OrderDate,TotalDue
+FROM Sales.SalesOrderHeader
+
+select * from #tmp_sales
+declare @SalesOrderID1 int=52590;
+update Sales.SalesOrderHeader
+set TaxAmt =777
+where SalesOrderID=@SalesOrderID1
+
+create table dbo.SalesOrderChangeLog (
+ ChangeID INT identity(1,1)  primary key,
+ SalesOrderID INT,
+ OldTaxamt MONEY,
+ NewTaxamt MONEY,
+ ChangeDate DATETIME
+ );
+ GO
+
+ select * from dbo.SalesOrderChangeLog
+
+
+create trigger trg_afterInsertt 
+on  Sales.SalesOrderHeader
+	AFTER UPDATE
+		AS
+		BEGIN
+		INSERT INTO dbo.SalesOrderChangeLog(SalesOrderID,OldTaxamt,NewTaxamt,ChangeDate)
+		SELECT i.SalesOrderID,d.TaxAmt,i.TaxAmt,GETDATE() FROM inserted i INNER JOIN deleted d on i.SalesOrderID=d.SalesOrderID;
+	END;
+
+
+
+
+CREATE TABLE #tmp_sales (
+    SalesOrderID int,
+    OrderDate datetime,
+	TotalDue money
+);
+CREATE PROCEDURE sales_procde
+ @CustomerID int,
+ @SalesOrderID int,
+ @Taxamt money
+as
+begin
+ 
+ declare @TotalSales Money;
+
+ WITH cte_sales AS (
+    SELECT CustomerID, SUM(subtotal) AS total
+    FROM Sales.SalesOrderHeader
+    WHERE CustomerID = @CustomerID 
+           GROUP BY CustomerID
+        )
+
+
+ 
+
+
+
+update Sales.SalesOrderHeader
+set TaxAmt =@Taxamt
+where SalesOrderID=@SalesOrderID
+
+end
+
+
+
+exec sales_procde @CustomerID=29825,
+ @SalesOrderID=43660,
+ @Taxamt= 77777
+
+
+
+-- NEW REQUIREMENTS
+
+
+ 
+ WITH cte_s as (
+select sum(OrderQty) as total
+from Sales.SalesOrderHeader a
+join Sales.SalesOrderDetail b
+on a.SalesOrderID=b.SalesOrderID
+group by b.ProductID
+

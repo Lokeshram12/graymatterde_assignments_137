@@ -1,0 +1,93 @@
+create table gme.dimCust(
+ id int,
+ name varchar(100),
+ starttime datetime,
+ endtime datetime)
+
+ select * from gme.dimCust
+
+ insert into gme.dimCust values (1,'lokesh',getdate(),null)
+ insert into gme.dimCust values (2,'Ram',getdate(),null)
+--scd 01
+update gme.dimCust
+set name='rohit'
+where id=2;
+
+--scd 02
+--insert a new record for historical tracking
+insert into gme.dimCust (id,name,starttime,endtime)
+values(1,'new name',getdate(),null);
+--update old record end time
+update gme.dimCust
+set endtime=getdate()
+where id=1 and endtime is null;
+
+--scd 03
+-- add column for tracking changes
+alter table gme.dimCust
+add previousCustomerName nvarchar(50);
+
+--update data with historical changes
+update gme.dimCust
+set previousCustomerName=name,
+name='New Name'
+where id=1;
+
+select * from Sales.customer
+
+exec sys.sp_cdc_enABLE_DB;
+EXEC SYS.SP_CDC_ENABLE_TABLE
+@source_schema=N'gme',
+@source_name=N'User_det',
+@role_name=NULL;
+
+select * from gme.User_det;
+insert into gme.User_det values(50,'rohitSharma','delhi')
+delete from gme.User_det
+where id =50
+select * from cdc.gme_User_det_CT
+
+select cast(orderdate as date) as NewOrderDate from sales.SalesOrderHeader
+
+select emailaddress from Person.EmailAddress
+
+SELECT 
+    EmailAddress,
+    SUBSTRING(EmailAddress, CHARINDEX('@', EmailAddress) + 1, LEN(EmailAddress) - CHARINDEX('@', EmailAddress)) AS Domain
+FROM 
+    Person.EmailAddress;
+
+CREATE FUNCTION dbo.GetEmailDomain (@EmailAddress NVARCHAR(255))
+RETURNS NVARCHAR(255)
+AS
+BEGIN
+    DECLARE @Domain NVARCHAR(255);
+    SET @Domain = SUBSTRING(@EmailAddress, CHARINDEX('@', @EmailAddress) + 1, LEN(@EmailAddress) - CHARINDEX('@', @EmailAddress));
+    RETURN @Domain;
+END;
+GO
+
+SELECT dbo.GetEmailDomain('user@abcdmple.com') AS EmailDomain;
+
+
+
+
+create table gme.desti(id int primary key,name varchar(100),starttime datetime,
+endtime datetime,previousCustomerName nvarchar(50))
+
+select * from gme.desti
+select * from gme.dimCust
+insert into gme.desti values(2,'rohit',getdate(),getdate(),null)
+
+MERGE gme.dest as target
+using gme.dimCust as sourced
+on (target.id = sourced.id and target.endtime is null)
+when matched and (target.id <> sourced.id or target.name <> sourced.name)
+then update set endtime=getdate()
+when not matched by target
+then insert(id,name,starttime,endtime,previousCustomerName)
+values(sourced.id,sourced.name,sourced.starttime,
+sourced.endtime,sourced.previousCustomerName);
+
+select * from gme.dest
+

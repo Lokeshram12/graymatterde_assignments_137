@@ -1,1 +1,1 @@
-Traing Program - SQL,Data Engineering Fundamentals,ETL pipelines,Python concepts, Pandas
+Training Program - SQL,Data Engineering Fundamentals,ETL pipelines,Python concepts, Pandas

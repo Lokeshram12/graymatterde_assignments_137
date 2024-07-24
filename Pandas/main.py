@@ -32,3 +32,7 @@ print(myvar)
 
 # JSON is plain text, but has the format of an object, and is well known in the world 
 # of programming, including Pandas.
+
+#  head() and tail() method used to print first and last 5 elements respectively and 
+#  can also take input and print only specified number of rows
+

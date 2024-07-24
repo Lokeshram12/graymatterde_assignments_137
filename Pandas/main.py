@@ -42,5 +42,5 @@ print(myvar)
 
 # The corr() method calculates the relationship between each column in your data set.
 
-
+# Pandas uses the plot() method to create diagrams.
 

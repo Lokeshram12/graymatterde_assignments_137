@@ -36,3 +36,11 @@ print(myvar)
 #  head() and tail() method used to print first and last 5 elements respectively and 
 #  can also take input and print only specified number of rows
 
+# dropna , fillna
+
+# dropduplicates()  and duplicated()
+
+# The corr() method calculates the relationship between each column in your data set.
+
+
+

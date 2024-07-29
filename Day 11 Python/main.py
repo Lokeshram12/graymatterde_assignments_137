@@ -33,6 +33,10 @@ class Employer:
             total_pay+= employee.salary()
         return total_pay
 
+    def display_all(self):
+        for employee in self.employees:
+            print(employee)
+
 employer = Employer()
 emp1 = Employee("lokesh",10,20)
 emp2 = Employee("ram",16, 25)
@@ -40,6 +44,6 @@ employer.add_employee(emp1)
 employer.add_employee(emp2)
 
 print(employer.calculate_total_pay())
-# try to display all employees
+employer.display_all()
 
 

@@ -1,0 +1,9 @@
+storage account - to input datasets, access keys
+Azure Data Factory(ADF)
+Integration runtime(IR) - for onpremise use SHIR,for cloud use Azure Auto resolve
+Linked Services- how to actually connect to the datasets
+data sets
+activitiea
+pipelines
+
+Key Vault - Secret

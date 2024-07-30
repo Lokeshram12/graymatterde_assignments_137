@@ -1,4 +1,5 @@
 1. https://www.smikar.com/azure-data-lake-vs-blob/
 2. https://azure.microsoft.com/en-in/pricing/tco/calculator/
-3. 
-4.
+3. https://adatis.co.uk/integration-runtimes-in-azure-data-factory/
+4. https://medium.com/microsoftazure/getting-started-with-azure-data-factory-8e5447a77bc9
+5. 

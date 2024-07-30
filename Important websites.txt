@@ -1,4 +1,4 @@
 1. https://www.smikar.com/azure-data-lake-vs-blob/
-2. 
-3.
+2. https://azure.microsoft.com/en-in/pricing/tco/calculator/
+3. 
 4.

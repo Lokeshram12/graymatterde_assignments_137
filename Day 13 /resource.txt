@@ -1,0 +1,5 @@
+https://stackoverflow.com/questions/53282012/variables-and-parameters-in-azure-data-factory
+
+https://learn.microsoft.com/en-us/azure/data-factory/control-flow-expression-language-functions#examples
+
+https://faun.pub/introduction-to-lookup-activity-in-azure-data-factory-4862333b998b

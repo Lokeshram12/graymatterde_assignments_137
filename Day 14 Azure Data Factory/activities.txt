@@ -1,0 +1,5 @@
+1. storage event trigger based on updated files and folders
+
+Azure sql database creation and get it in pipelines
+
+API scrapping in ADF

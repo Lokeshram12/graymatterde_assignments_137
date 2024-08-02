@@ -1,0 +1,16 @@
+Version Control
+
+Collabration -Main/Master Branch
+
+Feature Branch
+
+Pull request <-> Reviews
+
+Merge Conflicts
+
+Revert
+
+Environment - Development, User Acceptance Testing (UAT) , Production
+
+
+

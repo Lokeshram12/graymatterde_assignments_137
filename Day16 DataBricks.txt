@@ -4,3 +4,8 @@ RDD - tansform(Narrow and wide) and action
 
 1. https://medium.com/@harun.raseed093
 2. 
+
+Sample commands in Databricks-Spark
+show()
+count()
+

@@ -8,4 +8,6 @@
 8. https://stackoverflow.com/questions/72578552/azure-databricks-clusters-can-you-adjust-the-number-of-executors-node#:~:text=%22Azure%20Databricks%20runs%20one%20executor%20per%20worker%20node%3B,in%20the%20context%20of%20the%20Azure%20Databricks%20architecture.%22
 9. https://stackoverflow.com/questions/32621990/what-are-workers-executors-cores-in-spark-standalone-cluster
 10. https://medium.com/@aryanvania03/apache-spark-the-number-of-cores-vs-the-number-of-executors-d694ef23abc2
-11. 
+11. https://medium.com/@ashwin_kumar_/spark-dataframe-cache-and-persist-explained-019ab2abf20f
+12. https://oindrila-chakraborty88.medium.com/cache-vs-persist-in-databricks-774b5faaa430
+13. 

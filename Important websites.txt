@@ -2,4 +2,10 @@
 2. https://azure.microsoft.com/en-in/pricing/tco/calculator/
 3. https://adatis.co.uk/integration-runtimes-in-azure-data-factory/
 4. https://medium.com/microsoftazure/getting-started-with-azure-data-factory-8e5447a77bc9
-5. 
+5. https://sparkbyexamples.com/spark/difference-between-spark-sql-shuffle-partitions-and-spark-default-parallelism/
+6. https://medium.com/@harshita.motwani23/parallelism-in-azure-databricks-process-multiple-data-at-scale-153aa3c03442
+7. https://www.databricks.com/glossary/what-are-spark-applications
+8. https://stackoverflow.com/questions/72578552/azure-databricks-clusters-can-you-adjust-the-number-of-executors-node#:~:text=%22Azure%20Databricks%20runs%20one%20executor%20per%20worker%20node%3B,in%20the%20context%20of%20the%20Azure%20Databricks%20architecture.%22
+9. https://stackoverflow.com/questions/32621990/what-are-workers-executors-cores-in-spark-standalone-cluster
+10. https://medium.com/@aryanvania03/apache-spark-the-number-of-cores-vs-the-number-of-executors-d694ef23abc2
+11. 

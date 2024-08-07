@@ -3,4 +3,8 @@ how to use them
 
 1. https://medium.com/@harun.raseed093/unity-catalog-in-databricks-54bab3afbb35
 2. https://medium.com/@data_engineering_0216/databricks-notebook-widgets-4d7ce26a0eb1
-3. 
+3. polybase copy
+4. https://medium.com/@ashwin_kumar_/spark-partitioning-partition-understanding-2c1705c3b0a0
+5. https://www.bing.com/ck/a?!&&p=3a5d9ff0df07da07JmltdHM9MTcyMjk4ODgwMCZpZ3VpZD0xMmRmM2M0NS00ZDA5LTYyNTgtMTQxZi0yODkxNGMzNTYzMzYmaW5zaWQ9NTQ4MQ&ptn=3&ver=2&hsh=3&fclid=12df3c45-4d09-6258-141f-28914c356336&psq=partition+in+spark+explained+medium+harun&u=a1aHR0cHM6Ly9tZWRpdW0uY29tL0BoYXJ1bi5yYXNlZWQwOTMvcmVwYXJ0aXRpb24tdnMtY29hbGVzY2UtaW4tc3BhcmstZDMzNjVmODYwMGQ4&ntb=1
+6. https://medium.com/@harun.raseed093/repartition-vs-coalesce-in-spark-d3365f8600d8
+7. 

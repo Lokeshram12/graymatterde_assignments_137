@@ -4,3 +4,5 @@
 4. code widget -  in production
 5. https://accounts.azuredatabricks.net/
 6. https://medium.com/@harun.raseed093/table-clone-in-databricks-94e247675d17
+7. https://accounts.azuredatabricks.net/settings/feature-enablement?account_id=d88ead84-18ad-4572-8366-6b0a2efc4233  -azure admin account
+8. 

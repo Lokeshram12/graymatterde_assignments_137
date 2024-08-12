@@ -1,10 +1,10 @@
-CREATE TABLE Store_Inventory (
+CREATE TABLE cap.Store_Inventory (
  ProductID INT,
  StoreID INT,
  StockLevel INT
 );
 
-INSERT INTO Store_Inventory (ProductID, StoreID, StockLevel) VALUES
+INSERT INTO cap.Store_Inventory (ProductID, StoreID, StockLevel) VALUES
 (201, 301, 100),
 (202, 302, 150),
 (203, 303, 200),

@@ -1,11 +1,13 @@
-CREATE TABLE Product (
+CREATE SCHEMA cap;
+
+CREATE TABLE cap.Product (
     ProductID INT PRIMARY KEY,
     ProductName VARCHAR(255),
     Category VARCHAR(50),
     Price DECIMAL(10, 2)
 );
 
-INSERT INTO Product (ProductID, ProductName, Category, Price) VALUES
+INSERT INTO cap.Product (ProductID, ProductName, Category, Price) VALUES
 (201, 'Apple AirPods', 'Widgets', 15.00),
 (202, 'Samsung Galaxy Buds', 'Widgets', 25.00),
 (203, 'Jabra Elite Earbuds', 'Widgets', 30.00),

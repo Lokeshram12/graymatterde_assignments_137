@@ -1,0 +1,51 @@
+ProductID,ProductName,Category,Price
+201,Apple AirPods,Widgets,15.00
+202,Samsung Galaxy Buds,Widgets,25.00
+203,Jabra Elite Earbuds,Widgets,30.00
+204,Beats by Dre,Widgets,20.00
+205,BOSE QuietComfort Earbuds,Widgets,35.00
+206,Nintendo Switch, Gadgets,45.00
+207,PlayStation 5, Gadgets,50.00
+208,Xbox Series X, Gadgets,55.00
+209,Anker Wireless Charger,Accessories,10.00
+210,Logitech MX Master Mouse,Accessories,12.00
+211,Apple Lightning Cable,Accessories,8.00
+212,Dyson V11 Vacuum,Tools,40.00
+213,Black+Decker Drill,Tools,42.00
+214,DeWalt Tool Set,Tools,38.00
+215,KitchenAid Stand Mixer,Appliances,100.00
+216,Instant Pot Duo,Appliances,120.00
+217,Bosch Dishwasher,Appliances,150.00
+218,Amazon Kindle Paperwhite,Items,5.00
+219,Nintendo Game Boy,Items,7.00
+220,Google Nest Hub,Items,6.00
+221,Apple Watch Series 7,Widgets,18.00
+222,Sony WH-1000XM4,Widgets,22.00
+223,Bose SoundLink Mini,Widgets,28.00
+224,Apple TV 4K,Gadgets,60.00
+225,Google Chromecast,Gadgets,65.00
+226,Philips Hue Light Bulb,Accessories,14.00
+227,Sonos One Speaker,Accessories,16.00
+228,DeWalt Cordless Drill,Tools,44.00
+229,Milwaukee Tool Set,Tools,46.00
+230,GE Refrigerator,Appliances,130.00
+231,Whirlpool Washing Machine,Appliances,140.00
+232,Fitbit Charge 5,Items,9.00
+233,Garmin Forerunner 945,Items,8.00
+234,Apple iPad Air,Widgets,26.00
+235,Samsung Galaxy Tab,Widgets,32.00
+236,GoPro Hero 9,Gadgets,70.00
+237,Canon EOS R5,Gadgets,75.00
+238,Logitech WebCam,Accessories,18.00
+239,SteelSeries Arctis 7,Tools,50.00
+240,Razer DeathAdder V2,Appliances,160.00
+241,Anker Power Bank,Items,10.00
+242,Apple iPhone 13,Widgets,20.00
+243,Samsung Galaxy S21,Widgets,22.00
+244,PlayStation VR,Gadgets,80.00
+245,Apple Magic Keyboard,Accessories,20.00
+246,Microsoft Surface Pen,Tools,55.00
+247,LG OLED TV,Appliances,170.00
+248,Kindle Oasis,Items,11.00
+249,GoPro Hero 10,Widgets,23.00
+250,Philips Air Fryer,Tools,60.00

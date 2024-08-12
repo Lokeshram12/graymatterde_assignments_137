@@ -1,13 +1,13 @@
 CustomerID,CustomerName,Age,Gender,Location
 101,John Doe,28,M,New York
-102,Jane Smith,34,F,Los Angeles
+102,Jane Smith,,F,Los Angeles
 103,Jim Brown,45,M,Chicago
 104,Linda White,29,F,San Francisco
 105,Michael Green,38,M,Seattle
 106,Emma Clark,27,F,Boston
 107,James Lewis,41,M,Miami
 108,Alice Martinez,32,F,Dallas
-109,David Wilson,36,M,Denver
+109,David Wilson,,M,Denver
 110,Sophia Walker,25,F,Atlanta
 111,Oliver Harris,40,M,Las Vegas
 112,Isabella Young,33,F,Orlando
@@ -15,7 +15,7 @@ CustomerID,CustomerName,Age,Gender,Location
 114,Charlotte King,30,F,Houston
 115,Henry Wright,42,M,San Diego
 116,Amelia Allen,31,F,Philadelphia
-117,Lucas Adams,28,M,San Antonio
+117,Lucas Adams,,M,San Antonio
 118,Grace Baker,26,F,San Jose
 119,William Moore,39,M,Austin
 120,Harper Nelson,34,F,Columbus

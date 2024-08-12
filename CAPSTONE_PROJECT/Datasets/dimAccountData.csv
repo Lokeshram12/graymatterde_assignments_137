@@ -1,11 +1,12 @@
 AccountNumber,CustomerID,AccountType,Balance,Status
+AccountID,CustomerID,AccountType,Balance,Status
 1001,101,Checking,1500.00,Active
-1002,102,Savings,2500.00,Active
-1003,103,Checking,1200.00,Active
-1004,104,Checking,1300.00,Inactive
-1005,105,Savings,2200.00,Active
+1002,102,Savings,,Active
+1003,103,Checking,,Active
+1004,104,,1300.00,Inactive
+1005,105,Savings,2200.00,
 1006,106,Checking,1600.00,Active
-1007,107,Savings,2700.00,Active
+1007,107,Savings,,Active
 1008,108,Checking,1400.00,Inactive
 1009,109,Savings,2300.00,Active
 1010,110,Checking,1800.00,Active

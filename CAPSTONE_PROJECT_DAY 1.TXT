@@ -1,0 +1,76 @@
+Fact_TABLE
+To meet the requirements for analysis and reporting based on your data schema, you'll need to leverage the provided dimension and fact tables effectively. Here's a breakdown of how each table should be used for the specified requirements and any necessary corrections or enhancements:
+
+### Aggregation Requirements
+
+1. **Total Sales by Product and Store:**
+   - **Fact Table:** `Sales_data.csv`
+   - **Dimensions Required:** `Product_data.csv`, `store_data.csv`
+   - **Usage:**
+     - Join `Sales_data.csv` with `Product_data.csv` on `ProductID` to get product details.
+     - Join `Sales_data.csv` with `store_data.csv` on `StoreID` to get store details.
+     - Aggregate the `Quantity` and `Price` from `Sales_data.csv` to compute total sales per product and store.
+
+2. **Average Sales Price by Category:**
+   - **Fact Table:** `Sales_data.csv`
+   - **Dimensions Required:** `Product_data.csv`
+   - **Usage:**
+     - Join `Sales_data.csv` with `Product_data.csv` on `ProductID` to get the `Category` and `Price`.
+     - Calculate the average `Price` for each `Category` by aggregating the `Price` field from `Sales_data.csv`.
+
+3. **Total Quantity Sold Per Store:**
+   - **Fact Table:** `Sales_data.csv`
+   - **Dimensions Required:** `store_data.csv`
+   - **Usage:**
+     - Join `Sales_data.csv` with `store_data.csv` on `StoreID`.
+     - Aggregate the `Quantity` field from `Sales_data.csv` to compute the total quantity sold per store.
+
+4. **Customer Demographics and Purchase Patterns:**
+   - **Fact Table:** `Sales_data.csv`
+   - **Dimensions Required:** `customer_data.csv`
+   - **Usage:**
+     - Join `Sales_data.csv` with `customer_data.csv` on `CustomerID`.
+     - Analyze demographic information (Age, Gender, Location) from `customer_data.csv` and correlate it with purchasing patterns (such as frequency and amount spent).
+
+### Business Use Cases
+
+1. **Sales Optimization:**
+   - **Tables Required:** `Sales_data.csv`, `Product_data.csv`, `store_data.csv`
+   - **Usage:**
+     - Identify high-performing products and stores by analyzing total sales and quantities.
+     - Join `Sales_data.csv` with `Product_data.csv` and `store_data.csv` to get insights into performance metrics.
+     - Develop strategies for underperforming areas by comparing sales data and identifying trends.
+
+2. **Inventory Management:**
+   - **Tables Required:** `Store_Inventory`, `Sales_data.csv`
+   - **Usage:**
+     - Monitor current stock levels from `Store_Inventory` and compare with sales data from `Sales_data.csv` to identify trends.
+     - Calculate stock levels and sales trends to optimize inventory and prevent stockouts or overstocking.
+
+3. **Customer Targeting:**
+   - **Tables Required:** `customer_data.csv`, `Sales_data.csv`
+   - **Usage:**
+     - Join `Sales_data.csv` with `customer_data.csv` to analyze purchasing behavior.
+     - Segment customers based on demographics and purchasing patterns to tailor marketing campaigns and promotions.
+
+4. **Operational Efficiency:**
+   - **Tables Required:** `Sales_data.csv`, `store_data.csv`
+   - **Usage:**
+     - Analyze store performance using sales data from `Sales_data.csv` and store details from `store_data.csv`.
+     - Evaluate store performance metrics to improve operational processes and staffing based on insights derived from the analysis.
+
+### Corrections and Enhancements
+
+1. **Add Missing Dimension:**
+   - **Inventory Details:** There’s no explicit table for inventory history or transactions. Adding a table or dataset that tracks inventory changes over time could provide deeper insights for inventory management.
+
+2. **Enhance Sales Detail Schema:**
+   - **Date Format:** Ensure the `Date` field in `Sales_data.csv` is in a standardized format (e.g., YYYY-MM-DD) for consistency and ease of analysis.
+
+3. **Account Table Enhancement:**
+   - **Customer Details:** The `Accounts` table should link to `customer_data.csv` to avoid redundancy. Ensure `AccountNumber` in `Accounts` table can be matched to the `AccountNumber` in `Sales_data.csv` if customer financial details are needed for analysis.
+
+4. **Include Additional Metrics:**
+   - **Sales Trends Over Time:** Consider adding a time dimension to analyze sales trends over different periods (e.g., monthly, quarterly).
+
+By leveraging these tables and enhancements, you can comprehensively address the aggregation and business use case requirements, providing valuable insights for decision-making and strategic planning.

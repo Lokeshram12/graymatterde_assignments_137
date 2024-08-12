@@ -1,0 +1,51 @@
+CustomerID,CustomerName,Age,Gender,Location
+101,John Doe,28,M,New York
+102,Jane Smith,34,F,Los Angeles
+103,Jim Brown,45,M,Chicago
+104,Linda White,29,F,San Francisco
+105,Michael Green,38,M,Seattle
+106,Emma Clark,27,F,Boston
+107,James Lewis,41,M,Miami
+108,Alice Martinez,32,F,Dallas
+109,David Wilson,36,M,Denver
+110,Sophia Walker,25,F,Atlanta
+111,Oliver Harris,40,M,Las Vegas
+112,Isabella Young,33,F,Orlando
+113,Ethan Scott,37,M,Phoenix
+114,Charlotte King,30,F,Houston
+115,Henry Wright,42,M,San Diego
+116,Amelia Allen,31,F,Philadelphia
+117,Lucas Adams,28,M,San Antonio
+118,Grace Baker,26,F,San Jose
+119,William Moore,39,M,Austin
+120,Harper Nelson,34,F,Columbus
+121,Jack Thompson,29,M,New York
+122,Olivia Harris,35,F,Los Angeles
+123,Benjamin Allen,46,M,Chicago
+124,Charlotte King,29,F,San Francisco
+125,Alexander Young,37,M,Seattle
+126,Mia Scott,32,F,Boston
+127,Daniel Wilson,44,M,Miami
+128,Emily Moore,29,F,Dallas
+129,Matthew Davis,38,M,Denver
+130,Abigail Walker,27,F,Atlanta
+131,James Harris,41,M,Las Vegas
+132,Lucas Green,33,M,Orlando
+133,Elijah Adams,30,M,Phoenix
+134,Sofia Taylor,28,F,Houston
+135,William Martinez,40,M,San Diego
+136,Evelyn Robinson,31,F,Philadelphia
+137,Michael Lewis,35,M,San Antonio
+138,Harper Wilson,27,F,San Jose
+139,Jacob Brown,39,M,Austin
+140,Chloe Johnson,26,F,Columbus
+141,Noah Martinez,28,M,New York
+142,Amelia Davis,36,F,Los Angeles
+143,James Green,45,M,Chicago
+144,Harper Lee,33,F,San Francisco
+145,Daniel Taylor,37,M,Seattle
+146,Emma Wilson,32,F,Boston
+147,Liam Brown,40,M,Miami
+148,Sophia Davis,27,F,Dallas
+149,Logan Anderson,38,M,Denver
+150,Mia Harris,30,F,Atlanta

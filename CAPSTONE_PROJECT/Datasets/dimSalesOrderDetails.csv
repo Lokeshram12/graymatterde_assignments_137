@@ -1,8 +1,3 @@
-Here is the `sales_order_details.csv` with the `TransactionID` values changed to alphanumeric format, starting from `TS01` and incrementing sequentially.
-
-### `sales_order_details.csv` (with alphanumeric `TransactionID`)
-
-```csv
 OrderID,TransactionID,Date,CustomerID,ProductID,Quantity,Price,StoreID
 ORD001,TS01,2024-01-01,101,203,3,25.00,305
 ORD002,TS02,2024-01-02,102,210,1,40.00,308

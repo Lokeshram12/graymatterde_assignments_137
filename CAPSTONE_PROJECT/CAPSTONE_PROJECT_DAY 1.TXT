@@ -1,4 +1,3 @@
-1. `Sales_data.csv` (50 rows) -- Fact table - need to be created later from dimension tables
 TransactionID,Date,CustomerID,ProductID,Quantity,Price,StoreID
 1,2024-01-01,101,201,2,15.00,301
 2,2024-01-02,102,202,1,25.00,302

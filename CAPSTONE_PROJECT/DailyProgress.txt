@@ -5,3 +5,12 @@ Day 1:Aug 12
 -created 2 sql tables in Azure SQL DB
 
 Day 2:Aug 13
+
+What we want to do?
+-implement a time stamp for file uploads
+-ADF->copy from client to raw
+-enable scd type 2 for customer_data.csv
+-ADB->raw to silver notebook
+-ADB->utility notebook
+
+What we completed?

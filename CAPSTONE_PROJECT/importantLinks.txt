@@ -1,0 +1,3 @@
+-  https://dataengineerazure.medium.com/how-to-implement-slowly-changing-dimension-type-2-using-azure-data-factory-scd-type-2-3d983005a731
+
+-  

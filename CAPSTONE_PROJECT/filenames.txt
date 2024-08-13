@@ -1,0 +1,4 @@
+PL_Capstone_Retail -pipeline name in ADF
+
+scd_customer_DataFlow - dataflow in ADF
+

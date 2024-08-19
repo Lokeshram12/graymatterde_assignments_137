@@ -10,4 +10,4 @@
 10. https://medium.com/@aryanvania03/apache-spark-the-number-of-cores-vs-the-number-of-executors-d694ef23abc2
 11. https://medium.com/@ashwin_kumar_/spark-dataframe-cache-and-persist-explained-019ab2abf20f
 12. https://oindrila-chakraborty88.medium.com/cache-vs-persist-in-databricks-774b5faaa430
-13. 
+13. https://www.databricks.com/glossary/medallion-architecture

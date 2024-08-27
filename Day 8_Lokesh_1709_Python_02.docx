@@ -1,15 +1,11 @@
-{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Wingdings;}{\f2\fnil\fcharset161 Calibri;}}
-{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
-\pard\sa200\sl276\slmult1\b\f0\fs22\lang9\par
-Python Assignment\par
-\par
-1. Data Manipulation with Pandas:\par
+
+Python Assignment
+1. Data Manipulation with Pandas:
 Given a dataset in the form of a dictionary, convert it to a DataFrame and perform\par
 the following tasks:\par
-\b0\f1\'a7\f0  Remove rows with missing values.\par
-\f1\'a7\f0  Group the data by 'Product' and calculate the total sales for each product.\par
-\f1\'a7\f0  Sort the results by total sales in descending order.\par
-\par
+\b\f0  Remove rows with missing values.\par
+\f  Group the data by 'Product' and calculate the total sales for each product.\par
+\f  Sort the results by total sales in descending order.\
 \b Create a pivot table that shows the sum of sales for each product, broken down\par
 by month.\par
 \b0\par
